@@ -1,4 +1,4 @@
-var enable_interaction = false;
+var enable_interaction = true;
 var time = 0;
 var rate = 0.01;
 
