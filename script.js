@@ -1,3 +1,4 @@
+var enable_interaction = false;
 var time = 0;
 var rate = 0.01;
 
@@ -73,7 +74,7 @@ function draw() {
   
   
  
-  
+  if (enable_interaction) {
     canvas.addEventListener('mousedown', e => {
         N_gon = 3 + Math.floor(Math.random()*4);
         color_palette_index = Math.floor(Math.random()*color_palettes.length);
@@ -109,7 +110,8 @@ function draw() {
     canvas.addEventListener('touchmove', function(e) {
         getTouchPosition(canvas,e);
         event.preventDefault();
-}, false);
+    }, false);
+  }
       
  
   
